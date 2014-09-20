@@ -97,5 +97,4 @@ public class InputMgr
         dd = dd > dist? 1 : dd/dist;
         return;
     }
-
 }
