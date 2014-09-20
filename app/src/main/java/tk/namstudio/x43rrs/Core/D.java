@@ -18,8 +18,7 @@ import tk.namstudio.x43rrs.Oggetti.Oggetto;
 public class D extends GLSurfaceView implements GLSurfaceView.Renderer
 {
     public static int sWidth, sHeight;
-    public static ArrayList<Oggetto> drawabili;
-    public static ArrayList<Oggetto> updatabili;
+    public static ArrayList<Oggetto> drawabili, updatabili;
     public static void add(Oggetto o)
     {
         drawabili.add(o);
@@ -51,7 +50,7 @@ public class D extends GLSurfaceView implements GLSurfaceView.Renderer
 
     @Override public void onSurfaceCreated(GL10 gl, EGLConfig config)
     {
-        gl.glClearColor(.5f, 0, 0, 1);
+        gl.glClearColor(.4f, .7f, 1, 1);
         gl.glEnable(GL10.GL_BLEND);
         gl.glBlendFunc(GL10.GL_ONE, GL10.GL_ONE_MINUS_SRC_ALPHA);
         gl.glEnable(GL10.GL_TEXTURE_2D);
