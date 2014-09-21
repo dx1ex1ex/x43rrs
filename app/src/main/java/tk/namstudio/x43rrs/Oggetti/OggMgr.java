@@ -17,9 +17,12 @@ public class OggMgr
 {
     //Textures
     public static int[] TEX_ICON = new int[1];
+    public static int[] TEX_TOM = new int[1];
+
     private static void LoadTextures()
     {
-        TEX_ICON[0]        = loadTexture(Main.c, R.drawable.ic_launcher, true);
+        TEX_ICON[0] = loadTexture(Main.c, R.drawable.ic_launcher, true);
+        TEX_TOM[0] = loadTexture(Main.c, R.drawable.tom, true);
     }
     private static int loadTexture(final Context context, final int resourceId, boolean clamp)
     {

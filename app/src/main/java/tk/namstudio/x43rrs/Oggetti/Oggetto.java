@@ -17,8 +17,9 @@ public class Oggetto
     protected int[] hTextureRef;
 
 
-    public Oggetto(V _position, A aplha, V _scale, int[] _hTextureRef)
+    public Oggetto(V _position, A _aplha, V _scale, int[] _hTextureRef)
     {
+        alpha = _aplha;
         position = _position;
         scale = _scale;
         hTextureRef = _hTextureRef;
@@ -50,7 +51,7 @@ public class Oggetto
 
 
         gl.glTranslatef(position.x, position.y, 0);
-        //gl.glRotatef(alpha.get(), 0, 0, 1);
+        gl.glRotatef(alpha.get(), 0, 0, 1);
         gl.glScalef(scale.x, scale.y, 1);
 
         gl.glDrawElements(GL10.GL_TRIANGLES, 6, GL10.GL_UNSIGNED_BYTE, OggMgr.indexBuffer);
